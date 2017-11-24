@@ -1,5 +1,5 @@
 # Scripts unity
 
-###How to compile
+##How to compile
 
-* **Just download Unity and MonoDevelop and go into MonoDevelop and press play** 
+* **Just download Unity and MonoDevelop and go into MonoDevelop and press play**
