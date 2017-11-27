@@ -38,7 +38,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 	public float speed = 0.3f;
 	public float jump = 1.0f; 
 	public Transform startposition;
-	public int wincount = 4;
+			public int wincount = 4;
 
 	// Use this for initialization
 	void Start () {
@@ -52,7 +52,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 
 	}
 
@@ -136,14 +136,16 @@ public void PlayerMovement () {
 		if(other.gameObject.tag == "Pickup")
 		{  
 			print ("Picked up object");
-		 other.gameObject.SetActive (false);
+		 
+			other.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
-	  }
-		if (other.gameObject.tag == "Power Up") 
+	        
+		}
+		if (other.gameObject.tag == "Speedboost") 
 		{
-			print ("powerup grabbed!");
-		
+			print ("SpeedBoost");
+			StartCoroutine (StopSpeedBoost ());
 		}
 
 	}
@@ -157,4 +159,12 @@ public void PlayerMovement () {
 		}
 
 	}
+
+	IEnumerator StopSpeedBoost(){
+		yield return  new WaitForSeconds (3F);
+		print ("speedboost over");
+
+	}
+
+
 }
