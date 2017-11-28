@@ -34,7 +34,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
           void Update() {
 
 
-				 }
+ }
 
           void FixedUpdate() {
             PlayerMovement();
