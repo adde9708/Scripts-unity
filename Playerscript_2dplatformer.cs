@@ -1,6 +1,4 @@
-﻿
-
-//------------------------
+﻿//------------------------
 //My Ideas
 //Endless runner
 //Avoid obstacles(Trees, you bounce back a bit if you hit it)
