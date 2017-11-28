@@ -110,17 +110,17 @@ public class Playerscript_2dplatformer: MonoBehaviour {
               count = count + 1;
               SetCountText();
             }
-            if (other.gameObject.tag == "Speedboost") {
-              print("SpeedBoost");
-              StartCoroutine(StopSpeedBoost());
+ if (other.gameObject.tag == "Speedboost") {
+		 StartCoroutine(StopSpeedBoost());
+		 print("SpeedBoost");
+
             }
           }
-          void SetCountText() {
-
-            countext.text = "Count" + count.ToString();
-            if (count >= wincount) {
-              wintext.text = "You win!";
-              Application.LoadLevel("level02");
+	      void SetCountText() {
+    countext.text = "Count" + count.ToString();
+   if (count >= wincount) {
+      wintext.text = "You win!";
+      Application.LoadLevel("level02");
             }
           }
 
