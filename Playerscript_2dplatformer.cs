@@ -27,7 +27,6 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		print ("Hej");
-
 		count = 0;
 		SetCountText ();
 		wintext.text = "";
