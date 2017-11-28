@@ -22,7 +22,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 	public float speed = 0.3f;
 	public float jump = 1.0f;
 	public Transform startposition;
-			public int wincount = 4;
+	public int wincount = 4;
 
 	// Use this for initialization
 	void Start () {
