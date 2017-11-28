@@ -2,7 +2,6 @@
 //My Ideas
 //Endless runner
 //Avoid obstacles(Trees, you bounce back a bit if you hit it)
-
 //Pickup objects
 //Powerups(faster, higher highscore)
 //powerdowns( slower, less highscore, restart, reverse controlls)
@@ -46,7 +45,6 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 
 public void PlayerMovement () {
 	if (Input.anyKey) {
-
 
 		if (Input.GetKeyDown (KeyCode.W)) {
 			//print ("W is pressed");
