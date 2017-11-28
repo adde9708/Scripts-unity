@@ -1,18 +1,4 @@
-﻿/*2D-platformer/datingsim
-Charm
-Avoid objects
-Presents
-Money
-Kiosk were you can spend the money
-Storydriven play
-*/
-//Jump
-// Kill enemies(Jump on them,or use powerup *see below)
-//Power ups X3
-//Mushrooms(more health/bigger)
-//Fireflower(throw damage on enemy)
-//Star()
-
+﻿
 
 //------------------------
 //My Ideas
@@ -36,7 +22,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 	public 	GUIText wintext;
 	private int count;
 	public float speed = 0.3f;
-	public float jump = 1.0f; 
+	public float jump = 1.0f;
 	public Transform startposition;
 			public int wincount = 4;
 
@@ -49,10 +35,10 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 		wintext.text = "";
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 
 	}
 
@@ -95,7 +81,7 @@ public void PlayerMovement () {
 	{
 		//print ("nothing is pressed");
 	}
-	
+
 		//print ("Goodbye");
 }
 	void QuitApp() {
@@ -104,15 +90,15 @@ public void PlayerMovement () {
 
 		}
 	}
-	//On Collision something something 
+	//On Collision something something
 	void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.tag == "wall") {
-		
+
 			print ("Collision has been dectected");
-	
+
 		}
 		if (collision.gameObject.tag == "Checkpoint") {
-			print ("Checkpoint has been dectected");       	
+			print ("Checkpoint has been dectected");
 		}
 		if (collision.gameObject.tag == "start") {
 			print ("start has been dectected");
@@ -121,28 +107,28 @@ public void PlayerMovement () {
 			print ("end has been dectected");
 
 		}
-	
+
 	}
 	void OnTriggerStay(Collider trigger) {
-		if (trigger.gameObject.tag == "Ladder") 
+		if (trigger.gameObject.tag == "Ladder")
 		{
 			print ("Ladder is enabled.");
-		
+
 		}
 }
 
-	void OnTriggerEnter(Collider other) {	
-		
+	void OnTriggerEnter(Collider other) {
+
 		if(other.gameObject.tag == "Pickup")
-		{  
+		{
 			print ("Picked up object");
-		 
+
 			other.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
-	        
+
 		}
-		if (other.gameObject.tag == "Speedboost") 
+		if (other.gameObject.tag == "Speedboost")
 		{
 			print ("SpeedBoost");
 			StartCoroutine (StopSpeedBoost ());
