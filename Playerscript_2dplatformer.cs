@@ -33,7 +33,8 @@ public class Playerscript_2dplatformer: MonoBehaviour {
           // Update is called once per frame
           void Update() {
 
-					}
+
+				 }
 
           void FixedUpdate() {
             PlayerMovement();
