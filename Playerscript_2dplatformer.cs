@@ -116,7 +116,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 
             }
           }
-	      void SetCountText() {
+	 void SetCountText() {
     countext.text = "Count" + count.ToString();
    if (count >= wincount) {
       wintext.text = "You win!";
