@@ -125,10 +125,10 @@ public class Playerscript_2dplatformer: MonoBehaviour {
             }
           }
 
-          IEnumerator StopSpeedBoost() {
-						speed=1.0F;
-						yield return new WaitForSeconds(3F);
-						speed=0.3;
-						print("speedboost over");
+    IEnumerator StopSpeedBoost() {
+			speed=1.0F;
+			yield return new WaitForSeconds(3F);
+			speed=0.3;
+			print("speedboost over");
           }
   }
