@@ -41,8 +41,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
             QuitApp();
           }
 
-        public
-          void PlayerMovement() {
+        public void PlayerMovement() {
             if (Input.anyKey) {
 
               if (Input.GetKeyDown(KeyCode.W)) {
