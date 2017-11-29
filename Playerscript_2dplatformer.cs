@@ -65,10 +65,10 @@ public class Playerscript_2dplatformer: MonoBehaviour {
               }
 
               if (Input.GetKey(KeyCode.R)) {
-								//reset to startposition aka origo.
-			this.transform.position = startposition.position;
+	//reset to startposition aka origo.
+			 this.transform.position = startposition.position;
             this.transform.rotation = startposition.rotation;
-								// print ("R is pressed");
+ // print ("R is pressed");
 
               }
             } else {
