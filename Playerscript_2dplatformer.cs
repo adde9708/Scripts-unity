@@ -110,7 +110,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
               count = count + 1;
               SetCountText();
             }
-       if (other.gameObject.tag == "Speedboost") {
+        if (other.gameObject.tag == "Speedboost") {
 		 StartCoroutine(StopSpeedBoost());
 		 print("SpeedBoost");
 
