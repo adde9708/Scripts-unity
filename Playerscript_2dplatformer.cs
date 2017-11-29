@@ -70,7 +70,7 @@ public class Playerscript_2dplatformer: MonoBehaviour {
                 this.transform.rotation = startposition.rotation;
               }
             } else {
-              // print ("nothing is pressed");
+               print ("nothing is pressed");
             }
 
             // print ("Goodbye");
