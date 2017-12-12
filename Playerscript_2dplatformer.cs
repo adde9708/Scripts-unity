@@ -97,11 +97,11 @@ this.transform.rotation = startposition.rotation;
             if (collision.gameObject.tag == "end") {
               print("end has been dectected");
             }
-if(collision.gameObject.tag=="Obstacle"){
-   StartCoroutine(HitObstacle());
-   print ("Obstacle hit");
-						}
-					}
+            if (collision.gameObject.tag == "Obstacle") {
+              StartCoroutine(HitObstacle());
+              print("Obstacle hit");
+            }
+                                        }
           void OnTriggerStay(Collider trigger) {
             if (trigger.gameObject.tag == "Ladder") {
               print("Ladder is enabled.");
