@@ -109,24 +109,23 @@ public class Playerscript_2dplatformer: MonoBehaviour {
 
           void OnTriggerEnter(Collider other) {
 
-            if (other.gameObject.tag == "Pickup") {
+          if (other.gameObject.tag == "Pickup") {
               print("Picked up object");
               other.gameObject.SetActive(false);
               count = count + 1;
               SetCountText();
             }
-        if (other.gameObject.tag == "Speedboost") {
-		 StartCoroutine(StopSpeedBoost());
-		 print("SpeedBoost");
-
+            if (other.gameObject.tag == "Speedboost") {
+              StartCoroutine(StopSpeedBoost());
+              print("SpeedBoost");
             }
           }
-	 void SetCountText() {
+          void SetCountText() {
 
-      countext.text = "Count" + count.ToString();
-   if (count >= wincount) {
-       wintext.text = "You win!";
-       Application.LoadLevel("level02");
+            countext.text = "Count" + count.ToString();
+            if (count >= wincount) {
+              wintext.text = "You win!";
+              Application.LoadLevel("level02");
             }
           }
 
