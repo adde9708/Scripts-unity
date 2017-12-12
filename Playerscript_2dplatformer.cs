@@ -99,6 +99,7 @@ this.transform.rotation = startposition.rotation;
             }
 						if(collision.gameObject.tag=="Obstacle"){
 							StartCoroutine(HitObstacle());
+							print ("Obstacle hit");
 						}
 					}
           void OnTriggerStay(Collider trigger) {
