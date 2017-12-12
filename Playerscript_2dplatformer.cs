@@ -97,7 +97,10 @@ this.transform.rotation = startposition.rotation;
             if (collision.gameObject.tag == "end") {
               print("end has been dectected");
             }
-          }
+						if(collision.gameObject.tag=="Obstacle"){
+							StartCoroutine(HitObstacle());
+						}
+					}
           void OnTriggerStay(Collider trigger) {
             if (trigger.gameObject.tag == "Ladder") {
               print("Ladder is enabled.");
@@ -127,10 +130,16 @@ this.transform.rotation = startposition.rotation;
             }
           }
 
-IEnumerator StopSpeedBoost() {
- speed=1.0F;
- yield return new WaitForSeconds(3F);
- speed=0.3;
- print("speedboost over");
+          IEnumerator StopSpeedBoost() {
+            speed = 1.0F;
+            yield return new WaitForSeconds(3F);
+            speed = 0.3;
+            print("speedboost over");
+          }
+
+          IEnumerator HitObstacle() {
+            speed = 0.2F;
+            yield return new WaitForSeconds(3F);
+            speed = 0.3F;
           }
   }
